@@ -1,4 +1,4 @@
-# ngx-typed-forms
+# ngx-typed-forms [![wercker status](https://app.wercker.com/status/1b1a639ac430358b93ea3960352ea758/s/master "wercker status")](https://app.wercker.com/project/byKey/1b1a639ac430358b93ea3960352ea758) [![npm version](https://badge.fury.io/js/ngx-typed-forms.svg)](https://badge.fury.io/js/ngx-typed-forms)
 
 Provides wrapped [Angular's FormBuilder](https://angular.io/docs/ts/latest/api/forms/index/FormBuilder-class.html) to write `AbstractControl<T>`. 
 It's a workaround for [issue#13721](https://github.com/angular/angular/issues/13721).

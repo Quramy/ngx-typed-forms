@@ -1,0 +1,29 @@
+box: quramy/node-nightmare
+build:
+  # The steps that will be executed on build
+  # Steps make up the actions in your pipeline
+  # Read more about steps on our dev center:
+  # http://devcenter.wercker.com/docs/steps/index.html
+  steps:
+    - script:
+      name: set yarn cache
+      code: |
+        export YARN_CACHE=$WERCKER_CACHE_DIR/yarn
+    - script:
+      name: install dependencies
+      code: |
+        HOME=$YARN_CACHE yarn
+    - script:
+      name: start xvfb daemon
+      code: |
+        export DISPLAY=':99.0'
+        xvfbd start
+    - script:
+      name: test
+      code: |
+        npm run test
+    - script: 
+      name: stop xvfb daemon
+      code: |
+        export DISPLAY=':99.0'
+        xvfbd stop 

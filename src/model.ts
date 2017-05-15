@@ -6,7 +6,7 @@ import {
 } from "@angular/forms";
 import { Observable } from "rxjs/Observable";
 
-export interface AbstractControl<T> extends NgAbstractControl {
+export interface AbstractControl<T = any> extends NgAbstractControl {
   readonly valueChanges: Observable<Partial<T>>;
   readonly value: T;
   setValue(value: Partial<T>, options?: Object): void;
@@ -15,7 +15,7 @@ export interface AbstractControl<T> extends NgAbstractControl {
   get(path: (string | number)[]): AbstractControl<any>;
 }
 
-export interface FormControl<T> extends NgFormControl {
+export interface FormControl<T = any> extends NgFormControl {
   readonly valueChanges: Observable<T>;
   readonly value: T;
   setValue(value: T, options?: Object): void;
@@ -24,7 +24,7 @@ export interface FormControl<T> extends NgFormControl {
   get(path: (string | number)[]): AbstractControl<any>;
 }
 
-export interface FormGroup<T> extends NgFormGroup {
+export interface FormGroup<T = any> extends NgFormGroup {
   // readonly controls:{ [P in keyof T]: AbstractControl<T[P]> }; // if remove this comment, a compilation error(TS2430) occurs.
   readonly valueChanges: Observable<T>;
   readonly value: T;
@@ -38,7 +38,7 @@ export interface FormGroup<T> extends NgFormGroup {
   getRawValue(): T;
 }
 
-export interface FormArray<T> extends NgFormArray {
+export interface FormArray<T = any> extends NgFormArray {
   readonly valueChanges: Observable<T[]>;
   readonly value: T[];
   push(control: AbstractControl<T>): void;

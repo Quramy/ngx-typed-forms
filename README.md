@@ -15,6 +15,9 @@ or
 npm install ngx-typed-forms
 ```
 
+### Remarks
+**This module requires TypeScript v2.3.2 or later because using [Generics defaults](https://github.com/Microsoft/TypeScript/pull/13487) feature**.
+
 ## Usage
 First, import module into your app:
 

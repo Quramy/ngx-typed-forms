@@ -54,11 +54,24 @@ describe("FormBuilder", () => {
     }));
 
     it("should get value from created formArray", inject([FormBuilder], (builder: FormBuilder) => {
-      const fa: FormArray<string> = builder.array<string>([
+      const fa: FormArray<string> = builder.array([
         builder.control("hoge"),
         builder.control("foo"),
       ]);
       assert.deepStrictEqual(fa.value, ["hoge", "foo"]);
+    }));
+  });
+
+  // TODO How to test compile?
+  describe("compilation", () => {
+    it("should pass compile check", inject([FormBuilder], (builder: FormBuilder) => {
+      let fg1: FormGroup;
+      fg1 = builder.group({ name: "hoge" });
+      let v1: typeof fg1.value; // any
+
+      let fg2: FormGroup<{ name: string }>;
+      fg2 = builder.group({ name: "hoge" });
+      let v2: typeof fg2.value; // { name: string }
     }));
   });
 

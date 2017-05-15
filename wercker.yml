@@ -14,6 +14,10 @@ build:
       code: |
         HOME=$YARN_CACHE yarn
     - script:
+      name: build
+      code: |
+        npm run build
+    - script:
       name: start xvfb daemon
       code: |
         export DISPLAY=':99.0'
@@ -27,3 +31,7 @@ build:
       code: |
         export DISPLAY=':99.0'
         xvfbd stop 
+
+deploy:
+  steps:
+    - turistforeningen/npm-publish

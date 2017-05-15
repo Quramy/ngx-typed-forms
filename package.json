@@ -1,6 +1,6 @@
 {
   "name": "ngx-typed-forms",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "license": "MIT",
   "main": "dist/ngx-typed-forms.umd.js",
   "module": "dist/ngx-typed-forms.es5.js",
@@ -14,9 +14,10 @@
   },
   "repository": "git+https://github.com/Quramy/ngx-typed-forms.git",
   "peerDependencies": {
+    "@angular/core": "^4.0.0",
     "@angular/forms": "^4.0.0",
-    "rxjs": "^5.4.0",
-    "typescript": "^2.3.0",
+    "rxjs": "^5.3.0",
+    "typescript": "^2.2.2",
     "zone.js": "^0.8.4"
   },
   "devDependencies": {

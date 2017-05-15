@@ -6,7 +6,7 @@ It's a workaround for [issue#13721](https://github.com/angular/angular/issues/13
 ## Install
 
 ```sh
-yarn ngx-typed-forms
+yarn add ngx-typed-forms
 ```
 
 or
@@ -16,8 +16,18 @@ npm install ngx-typed-forms
 ```
 
 ## Usage
+First, import module into your app:
 
-You can use this as the original FormBuilder:
+```ts
+import { NgxTypedFormsModule } from 'ngx-typed-forms';
+
+@NgModule({
+  import: [NgxTypedFormsModule],
+})
+export class AppModule { }
+```
+
+And you can build some form group with `FormBuilder` provided by this module. For example:
 
 ```ts
 // import { FormBuilder } from '@angular/forms';

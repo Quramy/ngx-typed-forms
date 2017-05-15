@@ -1,7 +1,6 @@
 # ngx-typed-forms
 
-Provides wrapped [Angular's FormBuilder](https://angular.io/docs/ts/latest/api/forms/index/FormBuilder-class.html) to write `AbstractControl<T>`.
-
+Provides wrapped [Angular's FormBuilder](https://angular.io/docs/ts/latest/api/forms/index/FormBuilder-class.html) to write `AbstractControl<T>`. 
 It's a workaround for [issue#13721](https://github.com/angular/angular/issues/13721).
 
 ## Install

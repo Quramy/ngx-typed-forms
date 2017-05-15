@@ -9,9 +9,9 @@
     "moduleResolution": "node",
     "experimentalDecorators": true,
     "lib": ["dom", "es2015"],
+    "types": ["jasmine", "node"],
     "skipLibCheck": true,
     "outDir": "../dist",
     "rootDir": "."
-  },
-  "files": ["./index.ts"]
+  }
 }

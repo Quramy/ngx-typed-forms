@@ -5,16 +5,19 @@ import {
   AsyncValidatorFn,
 } from "@angular/forms";
 
-import { FormControl, FormGroup, FormArray } from "./model";
+import { AbstractControl, FormControl, FormGroup, FormArray } from "./model";
 
 @Injectable()
 export class FormBuilder {
 
+  private _delegate: NgFormBuilder;
   static create() {
-    return new FormBuilder(new NgFormBuilder());
+    return new FormBuilder();
   }
 
-  constructor(public _delegate: NgFormBuilder) { }
+  constructor() {
+    this._delegate = new NgFormBuilder();
+  }
 
   group<T>(value: T): FormGroup<T>;
   group<S>(controlsConfig: {[key: string]: any}, extra?: {[key: string]: any}): FormGroup<S>;
@@ -22,11 +25,12 @@ export class FormBuilder {
     return this._delegate.group(controlsConfig, extra);
   }
 
-  control<S>(formState: Object, validator?: ValidatorFn | ValidatorFn[] | null, asyncValidator?: AsyncValidatorFn | AsyncValidatorFn[] | null): FormControl<S>;
+  control<T>(value: T, validator?: ValidatorFn | ValidatorFn[] | null, asyncValidator?: AsyncValidatorFn | AsyncValidatorFn[] | null): FormControl<T>;
   control(formState: Object, validator?: ValidatorFn | ValidatorFn[] | null, asyncValidator?: AsyncValidatorFn | AsyncValidatorFn[] | null) {
     return this._delegate.control(formState, validator, asyncValidator);
   }
 
+  array<T>(controls: AbstractControl<T>[], validator?: ValidatorFn | null, asyncValidator?: AsyncValidatorFn | null): FormArray<T>;
   array<S>(controlsConfig: any[], validator?: ValidatorFn | null, asyncValidator?: AsyncValidatorFn | null): FormArray<S>;
   array(controlsConfig: any[], validator?: ValidatorFn | null, asyncValidator?: AsyncValidatorFn | null) {
     return this._delegate.array(controlsConfig, validator, asyncValidator);

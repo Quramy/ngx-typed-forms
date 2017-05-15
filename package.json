@@ -1,6 +1,6 @@
 {
   "name": "ngx-typed-forms",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "license": "MIT",
   "main": "dist/ngx-typed-forms.umd.js",
   "module": "dist/ngx-typed-forms.es5.js",
@@ -8,6 +8,7 @@
   "typings": "dist/ngx-typed-forms.d.ts",
   "scripts": {
     "clean": "rimraf build dist",
+    "test": "webpack --config webpack.test.config.js && karma start --single-run --browsers=Nightmare",
     "ngc": "ngc -p src/tsconfig.build.json && ngc -p src/tsconfig.es5.json",
     "build": "npm run ngc&& rollup -c rollup.config.js && rollup -c rollup.config.es5.js && rollup -c rollup.config.umd.js",
     "prepublish": "npm run clean && npm run build"
@@ -27,10 +28,21 @@
     "@angular/core": "^4.1.2",
     "@angular/forms": "^4.1.2",
     "@angular/platform-browser": "^4.1.2",
+    "@angular/platform-browser-dynamic": "^4.1.2",
+    "@types/node": "^7.0.18",
+    "@types/jasmine": "^2.5.47",
+    "jasmine": "^2.6.0",
+    "karma": "^1.7.0",
+    "karma-chrome-launcher": "^2.1.1",
+    "karma-jasmine": "^1.1.0",
+    "karma-nightmare": "^0.4.6",
+    "light-ts-loader": "^1.1.2",
+    "reflect-metadata": "^0.1.10",
     "rimraf": "^2.6.1",
     "rollup": "^0.41.6",
     "rxjs": "^5.4.0",
     "typescript": "^2.3.2",
+    "webpack": "^2.5.1",
     "zone.js": "^0.8.10"
   }
 }

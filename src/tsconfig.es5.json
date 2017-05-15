@@ -1,0 +1,26 @@
+{
+  "compilerOptions": {
+    "declaration": true,
+    "declarationDir": "../dist",
+    "module": "es2015",
+    "target": "es5",
+    "noImplicitAny": false,
+    "sourceMap": true,
+    "inlineSources": true,
+    "moduleResolution": "node",
+    "experimentalDecorators": true,
+    "lib": ["dom", "es2015"],
+    "skipLibCheck": true,
+    "outDir": "../build/es5",
+    "rootDir": "."
+  },
+  "files": ["./index.ts"],
+  "angularCompilerOptions": {
+    "strictMetadataEmit": true,
+    "skipTemplateCodegen": true,
+    "flatModuleId": "ngx-typed-forms",
+    "flatModuleIndex": "./index.ts",
+    "flatModuleOutFile": "ngx-typed-forms.js",
+    "annotateForClosureCompiler": true
+  }
+}

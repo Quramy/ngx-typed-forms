@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "declaration": true,
+    "module": "es2015",
+    "target": "es5",
+    "noImplicitAny": false,
+    "sourceMap": true,
+    "inlineSources": true,
+    "moduleResolution": "node",
+    "experimentalDecorators": true,
+    "lib": ["dom", "es2015"],
+    "skipLibCheck": true,
+    "outDir": "../dist",
+    "rootDir": "."
+  },
+  "files": ["./index.ts"]
+}

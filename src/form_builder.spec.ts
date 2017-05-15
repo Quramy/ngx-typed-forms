@@ -80,6 +80,7 @@ describe("FormBuilder", () => {
         age: 32,
         favoriteDishes: ["pizza", "sushi"],
       });
+      assert.deepStrictEqual(fg.get("name").value, { first: "Yosuke", last: "Kurami" }, "group.get returns nested control");
     }));
   });
 });

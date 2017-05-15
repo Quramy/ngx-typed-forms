@@ -22,7 +22,7 @@ First, import module into your app:
 import { NgxTypedFormsModule } from 'ngx-typed-forms';
 
 @NgModule({
-  import: [NgxTypedFormsModule],
+  imports: [NgxTypedFormsModule],
 })
 export class AppModule { }
 ```

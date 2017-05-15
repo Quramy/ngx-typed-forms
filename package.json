@@ -1,6 +1,6 @@
 {
   "name": "ngx-typed-forms",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "license": "MIT",
   "main": "dist/ngx-typed-forms.umd.js",
   "module": "dist/ngx-typed-forms.es5.js",

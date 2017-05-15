@@ -64,6 +64,6 @@ const nameCtrl = form.get('name'); // returns AbstractControl<{ first: string; l
 nameCtrl.valueChanges.subscribe(({ last, first }) => console.log(last, first));
 ```
 
-#License
+# License
 This software is released under the MIT License, see LICENSE under the this repository.
 

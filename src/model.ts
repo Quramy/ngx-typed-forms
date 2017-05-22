@@ -7,9 +7,9 @@ import {
 import { Observable } from "rxjs/Observable";
 
 export interface AbstractControl<T = any> extends NgAbstractControl {
-  readonly valueChanges: Observable<Partial<T>>;
+  readonly valueChanges: Observable<T>;
   readonly value: T;
-  setValue(value: Partial<T>, options?: Object): void;
+  setValue(value: T, options?: Object): void;
   get<K extends keyof T>(path: K): AbstractControl<T[K]>;
   get<S>(path: (string | number)[]): AbstractControl<S>;
   get(path: (string | number)[]): AbstractControl<any>;

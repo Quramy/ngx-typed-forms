@@ -4,7 +4,7 @@ import {
   FormGroup as NgFormGroup,
   FormArray as NgFormArray,
 } from "@angular/forms";
-import { Observable } from "rxjs/Observable";
+import { Observable } from "rxjs";
 
 export interface AbstractControl<T = any> extends NgAbstractControl {
   readonly valueChanges: Observable<T>;

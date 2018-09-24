@@ -24,7 +24,7 @@
   "devDependencies": {
     "@angular/common": "^6.0.0",
     "@angular/compiler": "^6.0.0",
-    "@angular/compiler-cli": "^6.0.0",
+    "@angular/compiler-cli": "^6.1.8",
     "@angular/core": "^6.0.0",
     "@angular/forms": "^6.0.0",
     "@angular/platform-browser": "^6.0.0",
@@ -41,7 +41,7 @@
     "rimraf": "^2.6.1",
     "rollup": "^0.43.0",
     "rxjs": "^6.1.0",
-    "typescript": "2.7.2",
+    "typescript": "~2.9.2",
     "webpack": "^2.5.1",
     "zone.js": "^0.8.26"
   }

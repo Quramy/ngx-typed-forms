@@ -41,7 +41,7 @@
     "rimraf": "^2.6.1",
     "rollup": "^0.43.0",
     "rxjs": "^6.1.0",
-    "typescript": "~2.7.2",
+    "typescript": "~2.9.2",
     "webpack": "^2.5.1",
     "zone.js": "^0.8.26"
   }

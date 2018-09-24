@@ -25,7 +25,7 @@ export interface FormControl<T = any> extends NgFormControl {
 }
 
 export interface FormGroup<T = any> extends NgFormGroup {
-  // readonly controls:{ [P in keyof T]: AbstractControl<T[P]> }; // if remove this comment, a compilation error(TS2430) occurs.
+  readonly controls:{ [P in keyof T]: AbstractControl<T[P]> };
   readonly valueChanges: Observable<T>;
   readonly value: T;
   get<K extends Extract<keyof T, string>>(path: K): AbstractControl<T[K]>;
